@@ -1,31 +1,31 @@
-# 🚀 Smart Systems Suite (Restaurant & Advanced Calculator)
+# 🧮 RA7IM CALCULATOR (Advanced C Math Engine)
 
-Welcome to my multi-language programming portfolio. This repository showcases a collection of professional-grade tools ranging from business management systems to high-performance mathematical engines.
+A powerful, high-performance command-line calculator built in C. This project uses a Recursive Descent Parser to evaluate complex mathematical expressions with high precision, handling operator precedence and scientific functions natively.
 
----
 
-## 🧮 1. RA7IM Calculator (Advanced Math Engine)
-A high-performance command-line calculator built in C. It uses a recursive descent parser to evaluate complex mathematical expressions with precision.
 
-### Features:
-* Recursive Parsing: Handles operator precedence (^, *, /, +, -) and nested parentheses.
-* Scientific Functions: Supports sqrt, cbrt, sin, cos, tan, ln, exp, and more.
-* Implicit Multiplication: Intelligent pre-processor that understands 2(5+5) as 2*(5+5).
-* Constants & Special Roots: Built-in support for pi and custom root calculations using root(x, n).
+## 🌟 Key Features
 
----
+* Advanced Expression Parsing: Handles nested parentheses and standard operator precedence (^ power, * multiplication, / division, + addition, - subtraction).
+* Scientific Function Support: Built-in support for trigonometric and logarithmic functions:
+    * sin, cos, tan, asin, acos, atan
+    * sqrt (square root), cbrt (cube root), ln (natural log), exp.
+* Implicit Multiplication: Automatically detects and handles implicit operations like 2(5+5) or 5pi.
+* Smart Pre-processor: Supports Unicode symbols like square roots (√) and cube roots (∛) directly from the input.
+* Custom Root Function: Ability to calculate any nth root using the syntax root(x, n).
+* Mathematical Constants: Built-in high-precision pi.
 
-## 🍽️ 2. Smart Restaurant Management System
-An integrated system to handle restaurant operations using C, Python, and Web technologies.
+## 🛠️ Technical Implementation
 
-### Components:
-* **C Backend (restaurant.c):** Handles core order processing and permanent data storage in orders.txt.
-* **Python Analytics (Restaurant 1.py):** An administrative dashboard for revenue calculation and sales trends analysis.
-* **Web Dashboard (restaurant html.html):** A modern UI built with HTML/CSS/JS to visualize orders and daily statistics.
+The calculator works in three main stages:
+1.  Pre-processing: Sanitizes input and injects missing operators (like *).
+2.  Lexical Analysis: Breaks down the string into recognizable mathematical "tokens".
+3.  Recursive Parsing: Evaluates the tokens based on mathematical grammar rules (Expressions -> Terms -> Powers -> Factors).
 
----
+## 🚀 How to Compile and Run
 
-## 🛠️ How to Compile aFor RA7IM Calculator:alculator:**
+To compile the calculator on a Linux/Unix or macOS system, you need to link the math library using the -lm flag:
+
 `bash
-gcc calculator_code.c -o calculator -lm
-./calculator
+gcc calculator.c -o ra7im_calc -lm
+./ra7im_calc
